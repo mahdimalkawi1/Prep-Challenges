@@ -14,7 +14,7 @@
 //      hobby: 'Gaming and Sleeping'
 //  }
 //
-//  Output: "my name is on Ellie JI am 67 YO, and I love Gaming and Sleeping."
+//  Output: "my name is Ellie Jon I am 67 YO, and I love Gaming and Sleeping."
 
 //  Note that:
 //  1- The text template is "my name is ** ** I am ** YO, and I love **."
@@ -30,7 +30,6 @@ const objLat = (obj) => {
     lastName=lastName.charAt(0).toUpperCase()+lastName.slice(1)
     return `my name is ${firstName} ${lastName} I am ${age} YO, and I love ${hobby}.`
 };
-
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -94,28 +93,15 @@ const objLat = (obj) => {
 
 const cvFormatter = (arr) => {
     // write your code here
-    let firstName= arr[0].firstName
-    let lastName= arr[1].lastName
-    let yearsOfExperience=arr.yearsOfExperience
-    let  tech= arr. tech
-    firstName=firstName.charAt(0).toUpperCase()+firstName.slice(1);
-
-    lastName=lastName.charAt(0).toUpperCase()+lastName.slice(1);
-
-    if (firstName == null) {
-        let fullName = lastName;
-
-    } else if (lastName == null){ 
-        let fullName = firstName
-        
-    }else {
-        let fullName = firstName + lastName
+    for (let index = 0; index < arr.length; index++) {
+        if(arr[index].yearsOfExperience<=1)
+        arr.splice(index, 1);
+        arr[index].fullName=(arr[index].lastName!=null)?arr[index].firstName.concat(" ",arr[index].lastName):arr[index].firstName;
+        delete arr[index].firstName;
+        delete arr[index].lastName;
+        delete arr[index].yearsOfExperience;
     }
-    if (yearsOfExperience > 1){
-        return `fullName: ${fullName} tech: ${tech}`
-    }
-
-
+    return arr;
 };
 // -------------------------------------------------------------------------------------------------------
 
