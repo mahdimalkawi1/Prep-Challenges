@@ -28,11 +28,37 @@
 
 const customerAndAge = (obj) => {
   // write your code here
-  let newArr=[];
+  let answer=[];
   for (let property in obj) {
-   newArr.push(`Customer Name :${property},Age :${obj[property]}`);
+   answer.push(`Customer Name :${property} , Age :${obj[property]}`);
   }
-  return newArr;
+  return answer;
+};
+// -------------------------------------------------------------------------------------------------------
+
+// -------------------------------------------------------------------------------------------------------
+// Challenge 02
+// optional:
+//
+// Write a function that takes recipe info object and returns an array of recipe info as strings
+// as in the example
+
+// Input:
+// let recipeInfo = {
+//   name: "pizza",
+//   ingredients: ["bread", "tomato", "chicken", "mayo"],
+//   cookTime: "twoHours",
+//   price: "25$",
+// };
+//
+// Output:
+// ["name: pizza", "ingredients: bread,tomato,chicken,mayo", "cookTime: twoHours", "price: 25$"]
+//
+// Note:
+// You can solve this challenge by using Object.entries
+
+const getEntries = (obj) => {
+  // write your code here
 };
 // -------------------------------------------------------------------------------------------------------
 
