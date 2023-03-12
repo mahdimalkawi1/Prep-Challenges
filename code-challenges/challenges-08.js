@@ -33,7 +33,6 @@ const customerAndAge = (obj) => {
    answer.push(`Customer Name :${property} , Age :${obj[property]}`);
   }
   return answer;
-  //
 };
 // -------------------------------------------------------------------------------------------------------
 
