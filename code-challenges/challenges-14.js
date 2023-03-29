@@ -67,6 +67,14 @@ const LastWord_2 = (str) => {
 
 const replaceWords = (str) => {
     // write your code here
+    let arr = str.split("I");
+    str = arr.join("We");
+    arr = str.split("was");
+    str = arr.join("were");
+    arr = str.split("am");
+    str = arr.join("are");
+    return str
+    
 }
 // -------------------------------------------------------------------------------------------------------
 
